@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+  <h2> Witaj, {{full_name}} Logowanie sie powiodlo</h2>
+  <p>Kliknij <a href="/rodzic/logout/"> tu</a>, zeby sie wylogowac.</p>
+  <br/>
+  <div class="row">
+        <div class="col-md-6" class="thumbnail"><a href="/tablica/posty"><img src="{% static "images/newstable.jpg" %}" alt="125x125" class="img-thumbnail"></a></div>
+        <div class="col-md-6" class="thumbnail"><img src="{% static "images/gallery.jpg" %}" alt="125x125" class="img-thumbnail"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6" class="thumbnail"><img src="{% static "images/parentsinfo.jpg" %}" alt="125x125" class="img-thumbnail"></div>
+        <div class="col-md-6" class="thumbnail"><img src="{% static "images/mailbox.jpg" %}" alt="125x125" class="img-thumbnail"></div>
+    </div>
+  <a href="/tablica/posty">Tablica ogloszen</a>
+
+{% endblock %}

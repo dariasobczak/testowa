@@ -1,0 +1,20 @@
+<HTML>
+<BODY>
+{% block content %}
+  {% if form.errors %}
+    <p class ="error">Nieprawidlowa nazwa uzytkownika lub haslo</p>
+  {% endif %}
+  
+  <form action="/rodzic/auth/" method="post">{% csrf_token %}
+  <label for="username">Uzytkownik: </label>
+  <input type="text" name="username" value="" id="username">
+  <label for="password">Haslo: </label>
+  <input type="password" name="password" value="" id="password">
+
+  <input type="submit" value="login" />
+  
+  </form>
+
+{% endblock %}
+</BODY>
+</HTML>

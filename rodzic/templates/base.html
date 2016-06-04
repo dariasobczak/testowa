@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ogłoszenie</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-theme.min.css" %}">
+  <link href='https://fonts.googleapis.com/css?family=Chela+One' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+ <!-- Brand and toggle get grouped for better mobile display -->
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand" href="#" style="font-family: 'Chela One', cursive; color: orange; font-size: 2.5em;">WHAT'S UP BABY?</a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+   <ul class="nav navbar-nav navbar-left">
+    <li class="active"><a href="#" target="_blank">Tablica ogłoszeń</a></li>
+    <li><a href="#" target="_blank">Poczta</a></li>
+    <li><a href="#" target="_blank">Zdjęcia</a></li>
+    <li><a href="#" target="_blank">Dane rodziców</a></li>
+   </ul>
+   <ul class="nav navbar-nav navbar-right"><li><a href="#">Login</a></li></ul>
+  </div>
+</div>
+</nav>
+<div class="container">
+	<div class="jumbotron">
+		<h1>Hello Baby!<h1>
+		{% block content %}
+		{% endblock %}
+	</div>
+
+    
+</div>
+<script type="text/javascript" rel="{% static "js/jquery-1.12.3.min" %}"></script>
+<script type="text/javascript" rel="{% static "js/bootstrap.min.js" %}"></script>
+</body>
+</html>
